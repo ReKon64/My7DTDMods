@@ -4,11 +4,30 @@
 
 <!-- <property name="CustomIcon" value=""/> -->
 <!-- AutoShotgun Firerate-->
+<!-- Buy only .50cal rifle that'll handle it right-->
+<!-- Tweaks-->
 
+<!-- Make silencers more expensive -->
+
+<!-- Suppresor / Silencer-->
+<set xpath="/item_modifiers/item_modifier[contains(@name,'modGunSoundSuppressorSilencer')]/effect_group[@name='mod effects']/passive_effect[@name='EntityDamage']/@value">0.05</set>
+<set xpath="/item_modifiers/item_modifier[contains(@name,'modGunSoundSuppressorSilencer')]/effect_group[@name='mod effects']/passive_effect[@name='DamageFalloffRange']/@value">0.2</set>
+<set xpath="/item_modifiers/item_modifier[contains(@name,'modGunSoundSuppressorSilencer')]/effect_group[@name='mod effects']/passive_effect[@name='MaxRange']/@value">0.2</set>
+
+<!-- AutoShotgun -->
+<set xpath="/items/item[contains(@name,'gunShotgunT3AutoShotgun')]/effect_group[@name='gunShotgunT3AutoShotgun']/property[@name='RoundsPerMinute']/@value">140</set>
+
+<!-- Slugs -->
+<set xpath="/items/item[contains(@name,'gunShotgun')]/effect_group[@class='ammoShotgunSlug']/passive_effect[@name='MaxRange']/@value">38</set>
+<set xpath="/items/item[contains(@name,'gunShotgun')]/effect_group[@class='ammoShotgunSlug']/passive_effect[@name='DamageFalloffRange']/@value">30</set>
+
+<!-- .308 HS modifier-->
 <append xpath="//effect_group[contains(@name, 'ammo44')]">
     <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
 </append> 
-<!--
+
+
+<!-- Keeping this just in case ;)
 <set xpath="/items/item[contains(@name,'gunShotgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellDragonsBreath</set>
 <set xpath="/items/item[contains(@name,'gunHandgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletBallPPP,ammo9mmExplosive</set>
 <set xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletPPP,ammo44MagnumBulletAP</set>
@@ -20,6 +39,9 @@
 <append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletBallPPP</append>
 
 <set xpath="/items/item[contains(@name,'gunRifle')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo308BulletBall,ammo308BulletBallPPP</set>
+
+<!-- Custom Ammo -->
+
     <append xpath="/items">
         
         <!-- DragonsBreath-->
@@ -77,15 +99,15 @@
                 <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
                 <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.15"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.15"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.02">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
 
             </effect_group>
@@ -113,15 +135,15 @@
                 <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
                 <passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="metal"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.20" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.20"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.20"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.02">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
             </effect_group>
         </item>
@@ -149,20 +171,20 @@
                 <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
                 <passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkMachineGunner"/><display_value name="dTargetArmor" value="-.3"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkMachineGunner"/><display_value name="dTargetArmor" value="-.3"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.02">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
             </effect_group>
         </item>
 
-       <!-- .308 Increase damage, increase noise in rifle by adding a custom sound-->
+       <!-- .308 ToDo: Increase noise-->
 
         <item name="ammo308BulletBall">
         <property name="Extends" value="ammo9mmBulletBall"/>
@@ -186,15 +208,15 @@
 
             <passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
             <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
-            <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye"/><display_value name="dTargetArmor" value="-.5"/>
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye"/><display_value name="dTargetArmor" value="-.5"/>
 
-            <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.02">
                 <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-            <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
                 <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-            <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
                 <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-            <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
                 <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
         </effect_group>
     </item>
@@ -225,13 +247,13 @@
                 <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
                 <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye"/><display_value name="dTargetArmor" value="-.5"/>
 
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.02">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
             </effect_group>
         </item>
