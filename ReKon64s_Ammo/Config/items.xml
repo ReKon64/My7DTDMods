@@ -1,0 +1,272 @@
+<ReKon64s_Ammo>
+<!-- PPP, slightly more damage, armor pen and less stack size, more expensive -->
+<!-- Sniper Rifles should have more fun to use ammo types-->
+
+<!-- <property name="CustomIcon" value=""/> -->
+<!-- AutoShotgun Firerate-->
+
+<append xpath="//effect_group[contains(@name, 'ammo44')]">
+    <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
+</append> 
+<!--
+<set xpath="/items/item[contains(@name,'gunShotgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellDragonsBreath</set>
+<set xpath="/items/item[contains(@name,'gunHandgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletBallPPP,ammo9mmExplosive</set>
+<set xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletPPP,ammo44MagnumBulletAP</set>
+<set xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">"ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletBallPPP,ammo762mmBulletAP"</set>
+-->
+<append xpath="/items/item[contains(@name,'gunShotgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellDragonsBreath</append>
+<append xpath="/items/item[contains(@name,'gunHandgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletBallPPP</append>
+<append xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletPPP</append>
+<append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletBallPPP</append>
+
+<set xpath="/items/item[contains(@name,'gunRifle')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo308BulletBall,ammo308BulletBallPPP</set>
+    <append xpath="/items">
+        
+        <!-- DragonsBreath-->
+        <item name="ammoShotgunShellDragonsBreath">
+            <property name="Extends" value="ammoShotgunShell"/>
+            <property name="CustomIcon" value="ammoShotgunShellDragonsBreath"/>
+            <property name="Tags" value="ammo,perkGunslinger"/>
+            <property name="Stacknumber" value="150"/>
+            <property name="HoldType" value="45"/>
+            <property name="EconomicValue" value="44"/>
+			<property name="DescriptionKey" value="ammoShotgunShellDragonsBreathDesc"/>
+        
+            <effect_group name="ammoShotgunShellDragonsBreath" tiered="false"> 
+                <passive_effect name="EntityDamage" operation="base_set" value="12" tags="perkBoomstick"/>
+                <passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkBoomstick"/>
+                <passive_effect name="DamageModifier" operation="perc_set" value="2.00" tags="wood,cloth"/>
+                <passive_effect name="DamageModifier" operation="perc_set" value="0.05" tags="earth,metal"/>
+				
+				<passive_effect name="RoundRayCount" operation="base_set" value="10" tags="perkBoomstick"/>
+				<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkBoomstick"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="0" tags="perkBoomstick"/>
+				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.0" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.0" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0" tags="perkBoomstick"/>
+				
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="$buffBurningFlamingArrow" operation="set" value="30"/>
+                <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningFlamingArrow"/>
+            </effect_group>
+        </item>
+
+        <!-- 9mm +P+ -->
+
+        <item name="ammo9mmBulletBallPPP">
+            <property name="Extends" value="ammo9mmBulletBall"/>
+            <property name="CustomIcon" value="ammo9mmBulletBallPPP"/>
+            <property name="DisplayType" value="ammoBulletAP"/>
+            <property name="Tags" value="ammo"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mbrass"/>
+            <property name="MeltTimePerUnit" value=".4"/>
+            <property name="Stacknumber" value="100"/>
+            <property name="EconomicValue" value="9"/>
+            <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+            <property name="DescriptionKey" value="ammoPPPDesc"/>
+            <effect_group name="ammo9mmBulletBallPPP" tiered="false">
+                <passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkGunslinger,9mmGun"/>
+                <passive_effect name="BlockDamage" operation="base_set" value="20" tags="perkGunslinger"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.15"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+
+            </effect_group>
+        </item>
+
+        <!-- .44 +P+ -->
+
+        <item name="ammo44MagnumBulletPPP">
+            <property name="Extends" value="ammo9mmBulletBall"/>
+            <property name="CustomIcon" value="ammo44MagnumBulletPPP"/>
+            <property name="DisplayType" value="ammoBulletAP"/>
+            <property name="Tags" value="ammo"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mbrass"/>
+            <property name="MeltTimePerUnit" value=".4"/>
+            <property name="Stacknumber" value="90"/>
+            <property name="EconomicValue" value="9"/>
+            <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+            <property name="DescriptionKey" value="ammoPPPDesc"/>
+            <effect_group name="ammo44MagnumBulletPPP" tiered="false">
+                <passive_effect name="EntityDamage" operation="base_set" value="90" tags="perkGunslinger,revolver"/>
+                <passive_effect name="BlockDamage" operation="base_set" value="30" tags="perkGunslinger"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="metal"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.20" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.20"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+            </effect_group>
+        </item>
+
+        <!-- 7.62mm +P+ -->
+
+        <item name="ammo762mmBulletBallPPP">
+            <property name="Extends" value="ammo9mmBulletBall"/>
+            <property name="CustomIcon" value="ammo762mmBulletBallPPP"/>
+            <property name="DisplayType" value="ammoBulletAP"/>
+            <property name="Tags" value="ammo"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mbrass"/>
+            <property name="MeltTimePerUnit" value=".4"/>
+            <property name="Stacknumber" value="100"/>
+            <property name="EconomicValue" value="9"/>
+            <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+            <property name="DescriptionKey" value="ammoPPPDesc"/>
+            <effect_group name="ammo762mmBulletBallPPP" tiered="false">
+                <passive_effect name="EntityDamage" operation="base_set" value="60" tags="perkMachineGunner"/>
+                <passive_effect name="BlockDamage" operation="base_set" value="50" tags="perkMachineGunner"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
+                <passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkMachineGunner"/><display_value name="dTargetArmor" value="-.3"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+            </effect_group>
+        </item>
+
+       <!-- .308 Increase damage, increase noise in rifle by adding a custom sound-->
+
+        <item name="ammo308BulletBall">
+        <property name="Extends" value="ammo9mmBulletBall"/>
+        <property name="CustomIcon" value="ammo308BulletBall"/>
+        <property name="DisplayType" value="ammoBulletAP"/>
+        <property name="Tags" value="ammo"/>
+        <property name="HoldType" value="45"/>
+        <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+        <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+        <property name="Material" value="Mbrass"/>
+        <property name="MeltTimePerUnit" value=".4"/>
+        <property name="Stacknumber" value="60"/>
+        <property name="EconomicValue" value="9"/>
+        <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+        <property name="DescriptionKey" value="ammo308BulletBallDesc"/>
+        <effect_group name="ammo308BulletBall" tiered="false">
+            <passive_effect name="EntityDamage" operation="base_set" value="100" tags="perkDeadEye"/> 
+            <passive_effect name="BlockDamage" operation="base_set" value="190" tags="perkDeadEye"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="earth"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
+
+            <passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye"/><display_value name="dTargetArmor" value="-.5"/>
+
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+        </effect_group>
+    </item>
+
+        <!-- .308 +P+ -->
+
+        <item name="ammo308BulletBallPPP">
+            <property name="Extends" value="ammo9mmBulletBall"/>
+            <property name="CustomIcon" value="ammo308BulletBallPPP"/>
+            <property name="DisplayType" value="ammoBulletAP"/>
+            <property name="Tags" value="ammo"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mbrass"/>
+            <property name="MeltTimePerUnit" value=".4"/>
+            <property name="Stacknumber" value="60"/>
+            <property name="EconomicValue" value="9"/>
+            <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+            <property name="DescriptionKey" value="ammoPPPDesc"/>
+            <effect_group name="ammo308BulletBall" tiered="false">
+                <passive_effect name="EntityDamage" operation="base_set" value="100" tags="perkDeadEye"/> 
+                <passive_effect name="BlockDamage" operation="base_set" value="190" tags="perkDeadEye"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="earth"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
+
+                <passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
+                <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye"/><display_value name="dTargetArmor" value="-.5"/>
+
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.04">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.08">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.12">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+                <passive_effect name="TargetArmor" operation="perc_add" value="-.16">
+                    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+            </effect_group>
+        </item>
+    
+        <!-- Explosive Ammo-->
+    <!--
+            <item name="ammo9mmExplosive">
+            <property name="Extends" value="ammo9mmBulletBall"/>
+            <property name="Tags" value="ammo,perkGunslinger"/>
+            <property name="CustomIcon" value="ammo9mmExplosive"/>
+            <property name="Stacknumber" value="120"/>
+            <property name="HoldType" value="45"/>
+            <property name="EconomicValue" value="44"/>
+			<property name="DescriptionKey" value="ammo9mmExplosive"/>
+
+            <effect_group name="ammo9mmExplosive" tiered="false"> 
+                <passive_effect name="EntityDamage" operation="base_set" value="30" tags="perkGunslinger"/>
+                <passive_effect name="BlockDamage" operation="base_set" value="20" tags="perkGunslinger"/>
+
+                <display_value name="dExRadius" value="1"/>
+            </effect_group>
+
+            <property class="Action1">
+                <property name="Class" value="Projectile"/>
+                <property name="Explosion.ParticleIndex" value="5"/> 
+                <property name="Explosion.RadiusBlocks" value="2"/>
+                <property name="Explosion.RadiusEntities" value="1"/> 
+                <property name="Explosion.DamageBonus.water" value="0"/>
+
+                <property name="Gravity" value="1"/>
+		        <property name="FlyTime" value="1"/>
+		        <property name="LifeTime" value="20"/>
+            </property>
+        </item>
+    -->
+        <!-- Nuke-->
+    </append>
+</ReKon64s_Ammo>

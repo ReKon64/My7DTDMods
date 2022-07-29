@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="ReKon64s_Ammo" />
+        <Description value="Custom Ammo Types" />
+        <Author value="ReKon64"/>
+        <Version value="0.1"/>
+    </ModInfo>
+</xml>

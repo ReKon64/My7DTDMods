@@ -1,0 +1,111 @@
+<Rekon64s_Anmmo> <!-- Add the remove!-->
+    <append xpath="/buffs">
+    <!--
+        <buff name="buffDragonsBreath" hidden="true">
+            <damage_type value="heat"/>
+            <stack_type value="replace"/><duration value="0"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDragonsBreathDuration" operation="add" value="-1"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDragonsBreathDuration" operation="set" value="0"/>
+            </effect_group>
+    
+            <effect_group>
+                <requirement name="CVarCompare" cvar="$buffDragonsBreathDuration" operation="LT" value="14"/>
+                    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDragonsBreathDuration" operation="set" value="14"/>
+                    <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffDragonsBreathDuration" operation="set" value="14"/>
+            </effect_group>
+    
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDragonsBreath">
+                    <requirement name="CVarCompare" cvar="$buffDragonsBreathDuration" operation="LTE" value="0"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDragonsBreathDuration" operation="set" value="0"/>
+            </effect_group>
+    
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFire"/>
+    
+                <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="4,12.3,15">
+                    <requirement name="EntityTagCompare" tags="player"/>
+                </passive_effect>
+    
+                <passive_effect name="WaterChangeOT" operation="base_subtract" value="1.5"/>
+                <passive_effect name="HypothermalResist" operation="base_add" value="35"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="-15"/>
+            </effect_group>
+        </buff>
+        
+
+        <buff name="buffIsOnFire" name_key="buffIsOnFireName" description_key="buffIsOnFireDesc" tooltip_key="buffIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+            <damage_type value="Heat"/>
+            <stack_type value="ignore"/>
+            <duration value="0"/><update_rate value="1"/>
+            <display_value value=".buffIsOnFireDisplay"/><display_value_format value="time"/>
+    
+            <effect_group>
+                <requirements compare_type="or">
+                    <requirement name="RandomRoll" seed_type="Random" min_max="0,1" operation="LTE" value="@_wetness"/>
+                    <requirement name="HasBuff" buff="buffExtinguishFire"/>
+                </requirements>
+    
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningFlamingArrow"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningMolotov"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningEnvironmentHack"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningEnvironment"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningElement"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDragonsBreath"/>
+            </effect_group>
+    
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$buffDragonsBreath"/>
+
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$buffBurningFlamingArrowDuration"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@buffBurningMolotovDuration">
+                    <requirement name="CVarCompare" cvar="buffBurningMolotovDuration" operation="GT" value="@.buffIsOnFireDisplay"/></triggered_effect>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$BurningEnvironmentDuration">
+                    <requirement name="CVarCompare" cvar="$BurningEnvironmentDuration" operation="GT" value="@.buffIsOnFireDisplay"/></triggered_effect>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$buffBurningElementDuration">
+                    <requirement name="CVarCompare" cvar="$buffBurningElementDuration" operation="GT" value="@.buffIsOnFireDisplay"/></triggered_effect>
+                    
+                
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$buffDragonsBreath"/>
+                
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$buffBurningFlamingArrowDuration"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@buffBurningMolotovDuration">
+                    <requirement name="CVarCompare" cvar="buffBurningMolotovDuration" operation="GT" value="@.buffIsOnFireDisplay"/></triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$BurningEnvironmentDuration">
+                    <requirement name="CVarCompare" cvar="$BurningEnvironmentDuration" operation="GT" value="@.buffIsOnFireDisplay"/></triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="@$buffBurningElementDuration">
+                    <requirement name="CVarCompare" cvar="$buffBurningElementDuration" operation="GT" value="@.buffIsOnFireDisplay"/></triggered_effect>
+            </effect_group>
+    
+            <effect_group> 
+                <requirements>
+                    <requirement name="!HasBuff" buff="buffBurningFlamingArrow"/>
+                    <requirement name="!HasBuff" buff="buffBurningMolotov"/>
+                    <requirement name="!HasBuff" buff="buffBurningEnvironmentHack"/>
+                    <requirement name="!HasBuff" buff="buffBurningEnvironment"/>
+                    <requirement name="!HasBuff" buff="buffBurningElement"/>
+                    <requirement name="!HasBuff" buff="buffDragonsBreath"/>  
+                </requirements>
+                    <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffIsOnFire"/>
+            </effect_group>
+    
+            <effect_group name="run particles, cleanup">
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="0"/>
+    
+                <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+
+                <triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+                <triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+    
+                <triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="onFireTip"/>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_burn_lp"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_burn_lp"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buff_burn_extinguish"/>
+            </effect_group>
+        </buff>
+    -->
+    </append>
+</Rekon64s_Anmmo>

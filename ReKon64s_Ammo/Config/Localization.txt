@@ -1,0 +1,16 @@
+Key,Source,Context,Changes,English
+
+ammoPPPDesc,item,Ammo,,"Add some more gunpowder and voilà\nMore damage AND penetration that standard bullets."
+
+ammoShotgunShellDragonsBreath,items,Ammo,,Dragons Breath Rounds
+ammoShotgunShellDragonsBreathDesc,item,Ammo,,"Dragons Breath Round\nSets your targets on fire."
+
+ammo9mmBulletBallPPP,items,Ammo,,9mm +P+
+
+ammo44MagnumBulletPPP,items,Ammo,,.44 +P+
+
+ammo762mmBulletBallPPP,items,Ammo,,7.62mm +P+
+
+ammo308BulletBall,items,Ammo,,.308
+ammo308BulletBallDesc,items,Ammo,,"What you should have been firing from those sniper rifles all along."
+ammo308BulletBallPPP,items,Ammo,,.308 +P+

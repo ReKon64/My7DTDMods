@@ -1,0 +1,118 @@
+<ReKon64s_Ammo>
+    <append xpath="/recipes">
+        <!--
+		<recipe name="ammo9mmBulletExplosive" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="10"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+
+
+
+        <recipe name="ammoBundle9mmBulletExplosive" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="80"/>
+            <ingredient name="resourceGunPowder" count="800"/>
+            <ingredient name="resourceBulletCasing" count="80"/>
+        </recipe>
+
+
+
+        <recipe name="ammo44MagnumBulletExplosive" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="15"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+        
+        <recipe name="ammoBundle44MagnumBulletExplosive" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="80"/>
+            <ingredient name="resourceGunPowder" count="1200"/>
+            <ingredient name="resourceBulletCasing" count="80"/>
+        </recipe>
+        
+
+
+        <recipe name="ammo762mmBulletExplosive" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="20"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+        
+        <recipe name="ammoBundle762mmBulletExplosive" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="80"/>
+            <ingredient name="resourceGunPowder" count="1600"/>
+            <ingredient name="resourceBulletCasing" count="80"/>
+        </recipe>
+        -->
+		<recipe name="ammoShotgunShellDragonsBreath" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
+            <ingredient name="resourceBuckshot" count="1"/>
+            <ingredient name="resourceGunPowder" count="8"/>
+            <ingredient name="resourcePaper" count="1"/>
+        </recipe>
+        
+        <recipe name="ammo9mmBulletBallPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="4"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+
+        <recipe name="ammo44MagnumBulletPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="8"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+
+        <recipe name="ammo762mmBulletBallPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="10"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+
+        <recipe name="ammo308BulletBall" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="15"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+
+        <recipe name="ammo308BulletBallPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="30"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+        <!--
+        <recipe name="ammoBundleShotgunShellDragonsBreath" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,learnable,chemistryStationCrafting">
+            <ingredient name="resourceBuckshot" count="80"/>
+            <ingredient name="resourceGunPowder" count="800"/>
+            <ingredient name="resourcePaper" count="80"/>
+        </recipe>
+
+
+
+        <recipe name="ammoShotgunSlug" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceScrapLead" count="20"/>
+            <ingredient name="resourceGunPowder" count="4"/>
+            <ingredient name="resourcePaper" count="1"/>
+        </recipe>
+        
+        <recipe name="ammoBundleShotgunSlug" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBuckshot" count="80"/>
+            <ingredient name="resourceGunPowder" count="320"/>
+            <ingredient name="resourcePaper" count="80"/>
+        </recipe>
+        
+        
+        
+        <recipe name="ammo9mmBullet+P+" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="1"/>
+            <ingredient name="resourceGunPowder" count="5"/>
+            <ingredient name="resourceBulletCasing" count="1"/>
+        </recipe>
+        
+        <recipe name="ammoBundle9mmBullet+P+" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
+            <ingredient name="resourceBulletTip" count="80"/>
+            <ingredient name="resourceGunPowder" count="400"/>
+            <ingredient name="resourceBulletCasing" count="80"/>
+        </recipe>
+        -->
+    </append>
+</ReKon64s_Ammo>
+<!-- +P+ Ammo ,explosive(Rustlike)for each type, Additionally DragonBreath for Shotguns, Nuke(apply radiation on hit, temporary field), custom .50cal-->
