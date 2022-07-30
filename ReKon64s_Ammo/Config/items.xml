@@ -1,27 +1,21 @@
 <ReKon64s_Ammo>
-<!-- PPP, slightly more damage, armor pen and less stack size, more expensive -->
+<!-- +P+ slightly more damage, armor pen and less stack size, more expensive -->
 <!-- Sniper Rifles should have more fun to use ammo types-->
 
 <!-- <property name="CustomIcon" value=""/> -->
-<!-- AutoShotgun Firerate-->
 <!-- Buy only .50cal rifle that'll handle it right-->
 <!-- Tweaks-->
 
 <!-- Make silencers more expensive -->
 
-<!-- Suppresor / Silencer-->
-<set xpath="/item_modifiers/item_modifier[contains(@name,'modGunSoundSuppressorSilencer')]/effect_group[@name='mod effects']/passive_effect[@name='EntityDamage']/@value">0.05</set>
-<set xpath="/item_modifiers/item_modifier[contains(@name,'modGunSoundSuppressorSilencer')]/effect_group[@name='mod effects']/passive_effect[@name='DamageFalloffRange']/@value">0.2</set>
-<set xpath="/item_modifiers/item_modifier[contains(@name,'modGunSoundSuppressorSilencer')]/effect_group[@name='mod effects']/passive_effect[@name='MaxRange']/@value">0.2</set>
-
 <!-- AutoShotgun -->
-<set xpath="/items/item[contains(@name,'gunShotgunT3AutoShotgun')]/effect_group[@name='gunShotgunT3AutoShotgun']/property[@name='RoundsPerMinute']/@value">140</set>
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute']/@value">140</set>
 
 <!-- Slugs -->
-<set xpath="/items/item[contains(@name,'gunShotgun')]/effect_group[@class='ammoShotgunSlug']/passive_effect[@name='MaxRange']/@value">38</set>
-<set xpath="/items/item[contains(@name,'gunShotgun')]/effect_group[@class='ammoShotgunSlug']/passive_effect[@name='DamageFalloffRange']/@value">30</set>
+<set xpath="//item[@name='ammoShotgunSlug']/effect_group[@name='ammoShotgunSlug']/passive_effect[@name='MaxRange']/@value">38</set><!-- Default: 18 -->
+<set xpath="//item[@name='ammoShotgunSlug']/effect_group[@name='ammoShotgunSlug']/passive_effect[@name='DamageFalloffRange']/@value">30</set><!-- Default: 9 -->
 
-<!-- .308 HS modifier-->
+<!-- .44 HS modifier-->
 <append xpath="//effect_group[contains(@name, 'ammo44')]">
     <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
 </append> 
@@ -33,10 +27,19 @@
 <set xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletPPP,ammo44MagnumBulletAP</set>
 <set xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">"ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletBallPPP,ammo762mmBulletAP"</set>
 -->
+
+<!-- Test -->
+
+<append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoRocketFrag</append>
+
+<!-- Lets the custom ammo be loaded into weapons-->
+
 <append xpath="/items/item[contains(@name,'gunShotgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellDragonsBreath</append>
 <append xpath="/items/item[contains(@name,'gunHandgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletBallPPP</append>
 <append xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletPPP</append>
 <append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletBallPPP</append>
+
+<append xpath="/items/item[contains(@name,'gunMGT3M60')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo308BulletBall,ammo308BulletBallPPP</append>
 
 <set xpath="/items/item[contains(@name,'gunRifle')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo308BulletBall,ammo308BulletBallPPP</set>
 

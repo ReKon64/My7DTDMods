@@ -1,0 +1,5 @@
+<ReKon64s_Ammo>
+    <append xpath="/traders/trader_info[@id=1)]/effect_group[@class='ammoShotgunSlug']/passive_effect[@name='DamageFalloffRange']/@value">30</append>
+    <item name="meleeToolPickT3AugerSchematic" count="1"/>
+
+</ReKon64s_Ammo>

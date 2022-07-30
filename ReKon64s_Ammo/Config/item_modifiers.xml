@@ -1,0 +1,8 @@
+<ReKon64s_Ammo>
+    
+    <!-- Suppresor / Silencer-->
+    <set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group[@name='mod effects']/passive_effect[@name='EntityDamage']/@value">0.05</set>
+    <set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group[@name='mod effects']/passive_effect[@name='DamageFalloffRange']/@value">0.2</set>
+    <set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group[@name='mod effects']/passive_effect[@name='MaxRange']/@value">0.2</set>
+
+</ReKon64s_Ammo>

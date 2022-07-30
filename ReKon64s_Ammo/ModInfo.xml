@@ -2,8 +2,8 @@
 <xml>
     <ModInfo>
         <Name value="ReKon64s_Ammo" />
-        <Description value="Custom Ammo Types" />
+        <Description value="Custom Ammo Types\n Credits: Gako and RobbieW from 7DTD Discord for helping me with the mod" />
         <Author value="ReKon64"/>
-        <Version value="0.1"/>
+        <Version value="A20.5"/>
     </ModInfo>
 </xml>
