@@ -1,0 +1,8 @@
+<Rekon64s_Anmmo>
+    <!-- Hunger bar under hotbar, changed to a brighter green-->
+    <set xpath="//window[@name='windowToolbelt']/rect/rect[@stat_type='Food']/filledsprite[@type='filled']/@color">124,252,0,255</set>
+    <!-- Thirst bar under hotbar, changed to a brighter blue-->
+    <set xpath="//window[@name='windowToolbelt']/rect/rect[@stat_type='Water']/filledsprite[@type='filled']/@color">0,255,255,255</set>
+    <!-- Exp bar under hotbar, changed to a brighter purple-->
+    <set xpath="//window[@name='windowToolbelt']/rect/sprite[@depth='4']/@color">255,0,255,255</set>
+</Rekon64s_Anmmo>
