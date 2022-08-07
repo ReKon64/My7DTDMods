@@ -27,5 +27,5 @@ I intend to balance the whole Tweak mod around the idea that weapons are super e
 - Slugs. Increased range
 - MP5SD (SMG). Now works as god intended. It is silenced by default, Lower spread, less random recoil and RPM increased to 800 to match it's IRL counterpart ,it also has a faster reload time to balance for it's relatively small damage(This may change due to my relatively small experience with this weapon. See the balancing note). This also means that it no longer can have other barrel attachments installed.
 - Satchel / Timed charges. Enourmous increase in block damage. I m not done with this item yet.
-- Magnum and DV * Zero spread and drastically increased kick and also headshot damage.
+- Magnum and DV - Zero spread and drastically increased kick and also headshot damage.
 - 
