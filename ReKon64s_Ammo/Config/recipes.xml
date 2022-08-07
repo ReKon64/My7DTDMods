@@ -1,5 +1,17 @@
 <ReKon64s_Ammo>
     <append xpath="/recipes">
+	<!-- Additional Bundle Recipes -->
+	<recipe name="questRewardT1BookBundle" count="1" craft_area="workbench" tags="workbenchCrafting">
+        <ingredient name="resourcePaper" count="1000"/>
+    </recipe>
+
+    <recipe name="questRewardT2RangedModsBundle" count="1" craft_area="workbench" tags="workbenchCrafting">
+        <ingredient name="resourceForgedSteel" count="500"/>
+    </recipe>
+
+    <recipe name="questRewardT3RangedModsBundle" count="1" craft_area="workbench" tags="workbenchCrafting">
+        <ingredient name="resourceElectricParts" count="1000"/>
+    </recipe>
         <!--
 		<recipe name="ammo9mmBulletExplosive" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
             <ingredient name="resourceBulletTip" count="1"/>
@@ -28,7 +40,6 @@
             <ingredient name="resourceGunPowder" count="1200"/>
             <ingredient name="resourceBulletCasing" count="80"/>
         </recipe>
-        
 
 
         <recipe name="ammo762mmBulletExplosive" count="1" craft_area="chemistryStation" tags="learnable,chemistryStationCrafting">
@@ -51,19 +62,19 @@
         
         <recipe name="ammo9mmBulletBallPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
             <ingredient name="resourceBulletTip" count="1"/>
-            <ingredient name="resourceGunPowder" count="4"/>
+            <ingredient name="resourceGunPowder" count="3"/>
             <ingredient name="resourceBulletCasing" count="1"/>
         </recipe>
 
         <recipe name="ammo44MagnumBulletPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
             <ingredient name="resourceBulletTip" count="1"/>
-            <ingredient name="resourceGunPowder" count="8"/>
+            <ingredient name="resourceGunPowder" count="5"/>
             <ingredient name="resourceBulletCasing" count="1"/>
         </recipe>
 
         <recipe name="ammo762mmBulletBallPPP" count="1" craft_area="chemistryStation" tags="chemistryStationCrafting">
             <ingredient name="resourceBulletTip" count="1"/>
-            <ingredient name="resourceGunPowder" count="10"/>
+            <ingredient name="resourceGunPowder" count="5"/>
             <ingredient name="resourceBulletCasing" count="1"/>
         </recipe>
 

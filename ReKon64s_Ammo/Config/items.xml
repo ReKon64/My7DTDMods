@@ -4,24 +4,82 @@
 
 <!-- <property name="CustomIcon" value=""/> -->
 <!-- Buy only .50cal rifle that'll handle it right-->
-<!-- Tweaks-->
+
+<!-- Malfunction system that would apply bleeds, sprains etc. chance reduces with associated skill and with time some injuries are removed from the pool. 
+Based on Quality/Tier/Difficulty to operate. For example Desert Vulture would malfunction more often than a pistol but less often than a magnum -->
+
+<!-- Tweaks -->
 
 <!-- Make silencers more expensive -->
 
+<!-- Pistol -->
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/property[@name='Tags']/@value">,drumMagazine</append>
+
+<!-- SMG -->
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']/@value">800</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0</set>
+
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='IncrementalSpreadMultiplier' and @operation='base_set']/@value">1.2</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadDegreesHorizontal' and @operation='base_set']/@value">1.3</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadDegreesVertical' and @operation='base_set']/@value">1.3</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadMultiplierWalking' and @operation='base_set']/@value">0.7</set>
+
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='KickDegreesVerticalMin' and @operation='base_set']/@value">-0.4</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='KickDegreesVerticalMax' and @operation='base_set']/@value">0.4</set>
+
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='KickDegreesHorizontalMin' and @operation='base_set']/@value">-0.4</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='KickDegreesHorizontalMax' and @operation='base_set']/@value">0.4</set>
+
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='ReloadSpeedMultiplier' and @operation='base_set']/@value">1.5</set>
+
+<!-- Add the silencer effect as God intended-->
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/property[@name='Tags']/@value">weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,noSilencer</set>
+<set xpath="//item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Sound_start']/@value">smg_s_fire</set>
+<set xpath="//item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Sound_loop']/@value">smg_s_fire</set>
+<set xpath="//item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Sound_end']/@value">silencefiller</set>
+
 <!-- AutoShotgun -->
-<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute']/@value">140</set>
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']/@value">400</set>
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0</set>
+
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='IncrementalSpreadMultiplier' and @operation='base_set']/@value">1</set>
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='BurstRoundCount' and @operation='base_set']/@value">999</set>
+<append xpath="/items/item[@name='gunShotgunT3AutoShotgun']">
+    <passive_effect name="SpreadDegreesVertical" operation="perc_add" value="-.7"/>
+    <passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="-.7"/>
+</append>
+
+<!-- Shotgun Shells-->
+<set xpath="/items/item[@name='ammoShotgunShell']/effect_group[@name='ammoShotgunShell']/passive_effect[@name='MaxRange']/@value">20</set>
+<set xpath="/items/item[@name='ammoShotgunShell']/effect_group[@name='ammoShotgunShell']/passive_effect[@name='DamageFalloffRange']/@value">15</set>
 
 <!-- Slugs -->
 <set xpath="//item[@name='ammoShotgunSlug']/effect_group[@name='ammoShotgunSlug']/passive_effect[@name='MaxRange']/@value">38</set><!-- Default: 18 -->
 <set xpath="//item[@name='ammoShotgunSlug']/effect_group[@name='ammoShotgunSlug']/passive_effect[@name='DamageFalloffRange']/@value">30</set><!-- Default: 9 -->
+
+<!-- Magnum -->
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[contains(@name,'Spread')]/@value">0</set>
+
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='KickDegreesVerticalMin' and @operation='base_set']/@value">9.5</set>
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='KickDegreesVerticalMax' and @operation='base_set']/@value">9.5</set>
+
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='KickDegreesHorizontalMin' and @operation='base_set']/@value">-0.3</set>
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='KickDegreesHorizontalMax' and @operation='base_set']/@value">0.3</set>
+
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']/@value">200</set>
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0</set>
+
+<!-- Desert Vulture | Increase Recoil, firerate, incremental spread. Reduce base spread to zero, first 3 shots should be on point. This still has to kick like a horse. Let it have an extended mag-->
 
 <!-- .44 HS modifier-->
 <append xpath="//effect_group[contains(@name, 'ammo44')]">
     <passive_effect name="DamageModifier" operation="perc_add" value="100" tags="head"/>
 </append> 
 
-
-<!-- Keeping this just in case ;)
+<!-- Satchel buff -->
+<set xpath="//item[@name='thrownTimedCharge']/property[@name='ThrowableDecoy' and @value='true']/effect_group[@tiered='false']/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">25000</set>
+<set xpath="//item[@name='thrownTimedCharge']/property[@name='Explosion.RadiusBlocks']/@value">0.1</set>
+<!-- Keeping this here just in case ;)
 <set xpath="/items/item[contains(@name,'gunShotgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellDragonsBreath</set>
 <set xpath="/items/item[contains(@name,'gunHandgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletBallPPP,ammo9mmExplosive</set>
 <set xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletPPP,ammo44MagnumBulletAP</set>
@@ -30,7 +88,7 @@
 
 <!-- Test -->
 
-<append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoRocketFrag</append>
+<!-- <append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoRocketFrag</append> -->
 
 <!-- Lets the custom ammo be loaded into weapons-->
 
@@ -39,8 +97,9 @@
 <append xpath="/items/item[contains(@name,'Magnum44')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletPPP</append>
 <append xpath="/items/item[contains(@name,'gunMG')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletBallPPP</append>
 
+<!-- This needs balancing
 <append xpath="/items/item[contains(@name,'gunMGT3M60')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo308BulletBall,ammo308BulletBallPPP</append>
-
+-->
 <set xpath="/items/item[contains(@name,'gunRifle')]/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo308BulletBall,ammo308BulletBallPPP</set>
 
 <!-- Custom Ammo -->
@@ -58,7 +117,7 @@
 			<property name="DescriptionKey" value="ammoShotgunShellDragonsBreathDesc"/>
         
             <effect_group name="ammoShotgunShellDragonsBreath" tiered="false"> 
-                <passive_effect name="EntityDamage" operation="base_set" value="12" tags="perkBoomstick"/>
+                <passive_effect name="EntityDamage" operation="base_set" value="12" tags="perkBoomstick"/> <!-- Per Pellet -->
                 <passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkBoomstick"/>
                 <passive_effect name="DamageModifier" operation="perc_set" value="2.00" tags="wood,cloth"/>
                 <passive_effect name="DamageModifier" operation="perc_set" value="0.05" tags="earth,metal"/>
@@ -260,7 +319,35 @@
                     <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
             </effect_group>
         </item>
-    
+
+        
+
+        <!-- Rocket Boom / More explosive | Make the vanilla HE rocket uncraftable / creative only then re-add it with name changed to Rocket Explosive, name this here HE -->
+        
+        <item name="ammoRocketBoom">
+            <property name="Extends" value="ammoRocketHE"/>
+            <property name="CustomIcon" value="ammoRocketBoom"/>
+            <property name="DescriptionKey" value="ammoRocketBoomDesc"/>
+            <property class="Action1">
+                <property name="Explosion.RadiusBlocks" value="15"/> <!-- damage radius for blocks -->
+                <property name="Explosion.RadiusEntities" value="15"/> <!-- damage radius for entities -->
+                <property name="Explosion.DamageBonus.stone" value=".1"/>
+                <property name="Explosion.DamageBonus.metal" value=".05"/>
+                <property name="Explosion.DamageBonus.earth" value="0"/>
+                <property name="Explosion.DamageBonus.wood" value="50"/>
+                <property name="Explosion.DamageBonus.water" value="0"/>
+            </property>
+        
+            <effect_group name="ammoRocketBoom" tiered="false">
+                <passive_effect name="BlockDamage" operation="base_set" value="20" tags="perkDemolitionsExpert"/>
+                <passive_effect name="EntityDamage" operation="base_set" value="700" tags="perkDemolitionsExpert"/>
+                <passive_effect name="ProjectileVelocity" operation="base_set" value="50" tags="perkDemolitionsExpert"/>
+                <display_value name="dExRadius" value="15"/>
+            </effect_group>
+        </item>
+
+        <!-- Napalm Rocket | Extends Molotov so I can make use of it's ground fire script | Use the onProjectileImpact for range modification-->
+
         <!-- Explosive Ammo-->
     <!--
             <item name="ammo9mmExplosive">

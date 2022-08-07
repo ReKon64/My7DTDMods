@@ -1,3 +1,4 @@
 <Rekon64s_Ammo>
+    <set xpath="//SoundDataNode[@name='smg_s_fire']/Noise/@noise">9</set>
     <set xpath="Sounds/SoundDataNode[@name=lever_action_rifle_fire]/AudioClip[contains(@ClipName,Sounds/Weapons/Ranged/Lever_Action_Rifle/lever_action_rifle_fire)]/@ClipName">Sounds\AudioSource_WeaponFire\308BoltActionRifleSingleFarGunshotB.mp3</set>
 </Rekon64s_Ammo>
