@@ -17,7 +17,7 @@ I's pretty damn expensive but it deals a whole lotta more damage than 7.62mm and
 - Box mag (TBI). M60 only attachment - 180 Ammo in the mag regardless of weapon quality. Reduces your mobility quite heavily and increases reload time dramatically.
 Penalty gets heavily reduced with each level of Machine Gunner perk with higher levels reducing the penalty even further. 
 
-#Balance 
+# Balance 
 I intend to balance the whole Tweak mod around the idea that weapons are super effective when used with higher levels of perks, great with some skill points invested and barely usable without them depending on the IRL difficulty to operate the weapon properly. For example, a SMG will be easier to use than a Pistol and Magnum will be even harder. I want to balance it around weapon kick, accuarcy ,spread to a smaller degree and reload times ,maybe mobility. I think that regulating damage via skill levels is idiotic however I probably will refrain from overhauling the skill point system in that departament.
 
 # Tweaks
