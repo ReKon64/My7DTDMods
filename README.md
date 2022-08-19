@@ -4,7 +4,8 @@
 
 # ReKon64s_Ammo
 This mod will eventually be split into ReKon64s_Ammo and ReKon64s_Tweaks so whoever decides to use my mod will be able to just get the ammo without the tweaks.
-Note: Everything that has (TBI) near it's name means that I have almost completed making it or that it's easy to implement for me. I might be wrong about the latter part sometimes so just please bear with me :)
+
+- Note: Everything that has (TBI) near it's name means that I have almost completed making it or that it's easy to implement for me. I might be wrong about the latter part sometimes so just please bear with me :)
 # Custom Content
 - +P+ Ammo variant - Mix between AP and HiPower ammo. It costs a bit more gunpowder but is always available to craft at the chemstation
 - Dragons Breath Rounds - Where it all started for me. Shotgun ammo that is a bit more pricey but has a slightly higher damage and sets enemies on fire for 30s. 
