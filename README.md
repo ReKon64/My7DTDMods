@@ -1,6 +1,6 @@
 # My7DTDMods
 
-# Credits: To @RobbieW and @Gako from official 7DTD server. This (series of) project(s) wouldn't have been possible without them.
+# Credits: To @RobbieW and @Gako from official 7DTD Discord server. This (series of) project(s) wouldn't have been possible without them.
 
 # ReKon64s_Ammo
 - PROJECT SUSPENDED - I'm focusing on other stuff in my life rn and I have zero motivation to develop this mod. However, I will 100% get around to it this year(2022)
