@@ -6,7 +6,7 @@
 - PROJECT SUSPENDED - I'm focusing on other stuff in my life rn and I have zero motivation to develop this mod. However, I will 100% get around to it this year(2022)
 This mod will eventually be split into ReKon64s_Ammo and ReKon64s_Tweaks so whoever decides to use my mod will be able to just get the ammo without the tweaks.
 
-- Note: Everything that has (TBI) near it's name means that I have almost completed making it or that it's easy to implement for me but I've not gotten around to doing it yet. I might be wrong about the latter part sometimes so just please bear with me :)
+- Note: Everything that has (TBI) near it's name means that I have almost completed making it or that it's easy to implement for me but I've not gotten around to doing it yet. I might be wrong about the latter part sometimes so just please bear with me :) . (Done) means that a feature was marked as TBI but was later completed.
 # Custom Content
 - +P+ Ammo variant - Mix between AP and HiPower ammo. It costs a bit more gunpowder but is always available to craft at the chemstation
 - Dragons Breath Rounds - Where it all started for me. Shotgun ammo that is a bit more pricey but has a slightly higher damage and sets enemies on fire for 30s. 
@@ -31,7 +31,7 @@ Also one of the main things that I dislike about 7DTD is that it punishes housew
 - Slugs - Increased range
 - MP5SD (SMG) - Now works as god intended. It is silenced by default, Lower spread, less random recoil and RPM increased to 800 to match it's IRL counterpart ,it also has a faster reload time to balance for it's relatively small damage(This may change due to my relatively small experience with this weapon. See the balancing note). This also means that it no longer can have other barrel attachments installed.
 - Satchel / Timed charges - Enourmous increase in block damage. I m not done with this item yet.
-- Magnum(Done) and DV(TBI) - Zero spread and drastically increased kick, headshot damage.
+- Magnum(Done) and DV(Done) - Zero spread and drastically increased kick, headshot damage.
 - Silencer - More expensive (TBI), no longer reduces damage and increases the max range and fall off range
 - Book and attachment bundles - Can now be crafted from humongous amounts of resources. Intended for late game / completion.
 - Various zombie tweaks(TBI) - Better and rarer Feral Wights, Spiders now fit their role better, scarier policeman explosion (player damage). Scarier zombie bears. Rarer but more dangerous screamers
