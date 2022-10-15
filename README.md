@@ -22,6 +22,8 @@ Penalty gets reduced significantly for each level of Machine Gunner perk with hi
 # Balance 
 I intend to balance the whole Tweak mod around the idea that weapons are super effective when used with higher levels of perks, great with some skill points invested and barely usable without them depending on the IRL difficulty to operate the weapon properly. For example, a SMG will be easier to use than a Pistol and Magnum will be even harder. I want to balance it around weapon kick, accuarcy ,spread to a smaller degree and reload times ,maybe mobility. I think that regulating damage via skill levels is idiotic however I probably will refrain from overhauling the skill point system in that departament.
 
+Also one of the main things that I dislike about 7DTD is that it punishes housewife players i.e people who stay at the base 80% keeping it in tip-top shape and crafting stuff for players who loot in the meantime. Being a great shot and crafting quality ammo is going to take a lotta more levels than dividing the responsiblities
+
 # Tweaks
 - Pistol - Pistol can now have a drum mag attached.
 - Autoshotgun - Lowered spread, more balanced kick. RPM set to 140 (default is 70 which makes it feel like a pump action operated by a toddler)
@@ -33,4 +35,9 @@ I intend to balance the whole Tweak mod around the idea that weapons are super e
 - Silencer - More expensive (TBI), no longer reduces damage and increases the max range and fall off range
 - Book and attachment bundles - Can now be crafted from humongous amounts of resources. Intended for late game / completion.
 - Various zombie tweaks(TBI) - Better and rarer Feral Wights, Spiders now fit their role better, scarier policeman explosion (player damage). Scarier zombie bears. Rarer but more dangerous screamers
-- Armor(TBI) For pvp?
+- Armor Overhaul(TBI) - Rebalancing armor to make it viable for PvP after my custom ammo / changes. Especially kevlar. Maybe custom repair items
+- Magazines (TBI)- To balance new attachment combinations, each weapon will have a magazine that will be crafted from the appropiate amount of bullets and metal, steel and springs for drum mags. Possibly with an option to reload the mags at a crafting table.
+- Aim Penalty for jumping (TBI)- No more bullshit PvP , just skill
+- M60 .308 variant (TBI) - End-game weapon requiring, max level Machine gunner skill, M60 schematic and max Advanced Engineering
+- Ammo quality tiers 1-3 (TBI) - (Especially targeted towards sniper ammo) Requiring Advanced engineering levels 1;3;5 respectively. Lower levels will have spread and random damage ranges with lvl 2 having no spread penalty and small random damage factor. Higher levels will require less resources.
+- Malfunction system? (TBI) - This is a very big question mark because it requires me to create custom vars and buffs which is arguably the single most annoying thing in 7DTD modding.
