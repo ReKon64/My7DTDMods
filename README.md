@@ -33,3 +33,4 @@ I intend to balance the whole Tweak mod around the idea that weapons are super e
 - Silencer - More expensive (TBI), no longer reduces damage and increases the max range and fall off range
 - Book and attachment bundles - Can now be crafted from humongous amounts of resources. Intended for late game / completion.
 - Various zombie tweaks(TBI) - Better and rarer Feral Wights, Spiders now fit their role better, scarier policeman explosion (player damage). Scarier zombie bears. Rarer but more dangerous screamers
+- Armor(TBI) For pvp?
