@@ -30,6 +30,6 @@ I intend to balance the whole Tweak mod around the idea that weapons are super e
 - MP5SD (SMG) - Now works as god intended. It is silenced by default, Lower spread, less random recoil and RPM increased to 800 to match it's IRL counterpart ,it also has a faster reload time to balance for it's relatively small damage(This may change due to my relatively small experience with this weapon. See the balancing note). This also means that it no longer can have other barrel attachments installed.
 - Satchel / Timed charges - Enourmous increase in block damage. I m not done with this item yet.
 - Magnum(Done) and DV(TBI) - Zero spread and drastically increased kick, headshot damage.
-- Silencer - More expansive (TBI), no longer reduces damage and increases the max range and fall off range
+- Silencer - More expensive (TBI), no longer reduces damage and increases the max range and fall off range
 - Book and attachment bundles - Can now be crafted from humongous amounts of resources. Intended for late game / completion.
 - Various zombie tweaks(TBI) - Better and rarer Feral Wights, Spiders now fit their role better, scarier policeman explosion (player damage). Scarier zombie bears. Rarer but more dangerous screamers
