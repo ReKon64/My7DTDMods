@@ -4,7 +4,7 @@
 # Designed for A20.5
 I will never EVER develop any 7DTD mods for other alphas. TFP is a joke and so are their decisions.
 # ReKon64s_Ammo
-- PROJECT SUSPENDED INDEFINITETLY - I'm focusing on other stuff in my life rn and I have zero motivation to develop this mod.
+- PROJECT SUSPENDED INDEFINITELY - I'm focusing on other stuff in my life rn and I have zero motivation to develop this mod.
 ~~However, I will 100% get around to it this year(2022)~~
 This mod will eventually be split into ReKon64s_Ammo and ReKon64s_Tweaks so whoever decides to use my mod will be able to just get the ammo without the tweaks.
 
